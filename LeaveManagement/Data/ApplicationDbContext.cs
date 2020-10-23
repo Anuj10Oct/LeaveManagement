@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using LeaveManagement.Models;
 
 namespace LeaveManagement.Data
 {
@@ -13,9 +14,10 @@ namespace LeaveManagement.Data
         {
         }
 
-        DbSet<Employee> Employees { get; set; }
-        DbSet<LeaveType> LeaveTypes { get; set; }
-        DbSet<LeaveAllocation> leaveAllocations { get; set; }
-        DbSet<LeaveHistory> LeaveHistories { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<LeaveType> LeaveTypes { get; set; }
+        public DbSet<LeaveAllocation> leaveAllocations { get; set; }
+        public DbSet<LeaveHistory> LeaveHistories { get; set; }
+        public DbSet<LeaveManagement.Models.LeaveTypeVM> DetailsLeaveTypeVM { get; set; }
     }
 }
